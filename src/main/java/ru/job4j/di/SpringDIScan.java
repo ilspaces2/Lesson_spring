@@ -15,7 +15,10 @@ public class SpringDIScan {
         context.scan("ru.job4j.di");
         context.refresh();
         StartUI ui = context.getBean(StartUI.class);
-        ui.add("Enter name: ");
+        ui.add("Enter name1: ");
         ui.print();
+        StartUI uiTwo = context.getBean(StartUI.class);
+        uiTwo.add("Enter name2: ");
+        uiTwo.print();
     }
 }
